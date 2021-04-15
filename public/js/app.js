@@ -11,7 +11,7 @@ async function fetchForecast() {
         forecastDiv.classList.add('hidden')
     }
     loadingAnimation.classList.remove('hidden')
-    const response = await fetch(`http://localhost:3000/weather?address=${address}`);
+    const response = await fetch(`/weather?address=${address}`);
     const data = await response.json();
     loadingAnimation.classList.add('hidden')
     if (data.error) {
